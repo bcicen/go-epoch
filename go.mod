@@ -1,4 +1,4 @@
-module github.com/bcicen/epoch
+module github.com/bcicen/go-epoch
 
 go 1.19
 
