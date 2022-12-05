@@ -2,7 +2,7 @@
 
 A simple go package / function to automatically convert Unix epoch timestamps (in seconds, milliseconds, or nanoseconds) to `time.Time`.
 
-_note_ this method only reliably works for times after date 999999999 (2001-09-09 01:46:39 UTC).
+> note this method only reliably works for timestamps between `1970-04-17 18:02:52 UTC` and `2262-04-11 23:47:16 UTC`
 
 ## Usage
 
