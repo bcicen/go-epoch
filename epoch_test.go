@@ -1,6 +1,7 @@
 package epoch
 
 import (
+	"fmt"
 	"testing"
 	"time"
 
@@ -12,6 +13,16 @@ func runTest(t *testing.T, n int64, tt time.Time, p time.Duration) {
 	margs := []any{"n=%d et=%s t=%s", n, et, tt}
 	assert.Equal(t, tt, et, margs...)
 	assert.Equal(t, tt.UnixMilli(), et.UnixMilli(), margs...)
+}
+
+func ExampleEpoch_time() {
+	fmt.Println(Time(1667015475).UTC())
+	fmt.Println(Time(1667015475000).UTC())
+	fmt.Println(Time(1667015475000000000).UTC())
+	// Output:
+	// 2022-10-29 03:51:15 +0000 UTC
+	// 2022-10-29 03:51:15 +0000 UTC
+	// 2022-10-29 03:51:15 +0000 UTC
 }
 
 func TestNewInputSeconds(t *testing.T) {

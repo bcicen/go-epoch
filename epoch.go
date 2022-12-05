@@ -19,8 +19,8 @@ type Numeric interface {
 }
 
 // Time interprets a provided s/ms/ns unix timestamp,
-// returning a time.Time
-// if n <= 0, returns zero time
+// returning a time.Time.
+// If n <= 0, returns zero time.
 func Time[T Numeric](ts T) time.Time {
 	n := int64(ts)
 	if n <= 0 {
