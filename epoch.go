@@ -6,12 +6,9 @@ import (
 )
 
 const (
-	msNanos = 1000000 // 1 ms in ns
-	sMillis = 1000    // 1 s in ms
-
 	maxNanos   = math.MaxInt64
-	maxMillis  = maxNanos / msNanos
-	maxSeconds = maxMillis / sMillis
+	maxMillis  = maxNanos / 1000000
+	maxSeconds = maxMillis / 1000
 )
 
 // Numeric expresses a type constraint satisfied by any numeric type.
